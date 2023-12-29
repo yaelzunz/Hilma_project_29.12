@@ -1,0 +1,72 @@
+/* Styles for menu component */
+
+.Menu {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 15rem;
+    height: calc(100% - 5rem - 2px);
+    border-left: 2px solid #888;
+    background-color: #fff;
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: safe;
+    /* animation */
+    /* משך ההנפשה הוא 0.3 שניות, והמצב הסופי נשמר באמצעות מצב הנפשה-מילוי: קדימה. */
+    animation-name: menu_slideIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+/*כל כפתור ברשימת הכפתורים. */
+.Menu .btns-list {
+    margin-top: 2rem;
+    width: 100%;
+    height: max-content;
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Menu .btns-list button {
+    width: 100%;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+/* מחילה סגנונות על הכפתורים כאשר הם מרחפים. */
+.Menu .btns-list button:hover {
+    background-color: #ddd;
+}
+
+/* מחלקה זו ממקדת את הכפתור האחרון ברשימה ומסירה את הגבול התחתון כדי למנוע גבול מתחת ללחצן האחרון. */
+.Menu .btns-list button:last-of-type {
+    border-bottom: none;
+}
+/* מחלקה זו מתמקדת בסמלי SVG (אם קיימים) בתוך הכפתורים. */
+.Menu .btns-list button svg {
+    margin-left: 0.6rem;
+}
+
+/* keyframes */
+/*מייצג את מצב ההתחלה והסיום של האנימציה, בהתאמה. */
+@keyframes menu_slideIn {
+    from {
+        opacity: 0;
+        translate: 100% 0;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}

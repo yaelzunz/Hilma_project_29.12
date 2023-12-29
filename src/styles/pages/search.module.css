@@ -1,0 +1,73 @@
+.container {
+    width: 100vw;
+    height: calc(100vh - 5rem);
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+    padding: 1.6rem 5rem;
+}
+
+.form {
+    width: 100%;
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 2rem;
+    gap: 2.6rem;
+}
+
+.form .input-search {
+    background-color: #d9d9d9;
+    border: 1px solid #000000aa;
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+    /* layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form .input-search input {
+    height: 1.6rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.form .btn-submit {
+    margin-left: auto;
+    background-color: #ccc;
+    border: 1px solid #000000aa;
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+}
+
+/* articles list group */
+
+.articles-list-group {
+    width: 100%;
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.articles-list-group .articles-list {
+    width: 100%;
+    /* layout */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.articles-list-group .articles-list > * {
+    margin-bottom: .4rem;
+}

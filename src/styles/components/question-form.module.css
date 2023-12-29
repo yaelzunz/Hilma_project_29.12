@@ -1,0 +1,69 @@
+/* Styles for question-form component */
+
+form {
+    width: 90%;
+    height: max-content;
+    padding: 2rem 1rem;
+    box-shadow: 0 0 10px #00000066;
+    margin-bottom: 1rem;
+    border-radius: 0.6rem;
+    direction: rtl;
+}
+
+form .question {
+    width: 100%;
+    /* layout */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+form .question span {
+    margin: 0.4rem 0;
+    width: 100%;
+    direction: ltr;
+}
+
+form .answer {
+    width: 100%;
+    /* layout */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+form .answer h4 {
+    margin: 0.6rem 0;
+}
+
+form .answer textarea {
+    width: 100%;
+    aspect-ratio: 3/1;
+    resize: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+}
+
+form .answer ol {
+    width: 100%;
+    height: max-content;
+    /* layout */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 1.4rem;
+    list-style-type: lower-alpha;
+}
+
+form .answer ol li {
+    width: 100%;
+    text-align: left;
+    direction: ltr;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+}

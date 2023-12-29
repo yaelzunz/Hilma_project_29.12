@@ -1,0 +1,104 @@
+/* Styles for article page */
+
+.Article {
+    width: 100%;
+    height: 100%;
+    /* layout */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 4rem 2rem 4rem;
+}
+
+.Article section {
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.Article section.text {
+    width: 55%;
+    /* layout */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+.Article section.text .heading {
+    width: 100%;
+    /* layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.Article section.text .heading h2 {
+    font-size: 1.4rem;
+    width: calc(100% - 3rem);
+    /* text elypsis when overflowing 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Article section.text .heading span {
+    height: 100%;
+    width: 3rem;
+    /* layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Article section.text .introduction {
+    width: 100%;
+    /* layout */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.Article section.text .introduction span.marked {
+    background-color: #f5fbb2;
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: .2rem;
+}
+
+.Article section.text .introduction span .explanation {
+    position: absolute;
+    top: 0;
+    left: 110%;
+    width: 10rem;
+    height: 5rem;
+    background-color: #111111dd;
+    /* layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* initial valus */
+    opacity: 0;
+    pointer-events: none;
+}
+.Article section.text .introduction span .explanation.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.Article section.forms {
+    width: 45%;
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
